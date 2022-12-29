@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+# db 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/basic_backend?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username: basic
+    password: 1234
+
+# mybatis 설정
+mybatis:
+  type-aliases-package: com.basic.backend.**.domain
+  mapper-locations: classpath:mapper/**/**.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
